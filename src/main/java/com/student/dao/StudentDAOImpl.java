@@ -6,9 +6,9 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
-
 import com.student.model.Student;
 import com.student.utility.StudentMapper;
+
 @Repository
 public class StudentDAOImpl implements StudentDAO{
 	
@@ -31,8 +31,9 @@ public class StudentDAOImpl implements StudentDAO{
 		return jdbcTemplate.query("select * from student", new StudentMapper() );
 		
 	}
-	public Student getStudentbyHighestMarks() {
-		return jdbcTemplate.query("select * from student", ,new Object[]{Id},new StudentMapper() );
+	public List<Student> getStudentbyHighestMarks() {
+		return jdbcTemplate.query("select * from giffgaff.student a where a.marks = (select max(b.marks) from giffgaff.student b) "
+				,new StudentMapper() );
 	}
 
 }

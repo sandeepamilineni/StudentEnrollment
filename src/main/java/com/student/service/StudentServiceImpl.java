@@ -22,7 +22,7 @@ public class StudentServiceImpl implements StudentService {
 	public List<Student> fetchAllStudents() {
 		return studentDAO.fetchAllStudents();
 	}
-	public Student getStudentbyHighestMarks() {
+	public List<Student> getStudentbyHighestMarks() {
 		return studentDAO.getStudentbyHighestMarks();
 	}
 

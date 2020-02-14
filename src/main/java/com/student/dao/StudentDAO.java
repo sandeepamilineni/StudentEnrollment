@@ -8,5 +8,5 @@ public interface StudentDAO {
 	public void enrollStudent(Student student);
 	public Student searchStudentById(String Id);
 	public List<Student> fetchAllStudents() ;
-	public Student getStudentbyHighestMarks();
+	public List<Student> getStudentbyHighestMarks();
 }
