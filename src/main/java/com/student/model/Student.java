@@ -1,11 +1,15 @@
 package com.student.model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Student {
 	
-
 	private String studentId;
 	private String studentName;
 	private int studentMarks;
+	
+	public Student() { 	}
 	
 	public Student(String studentId, String studentName,int studentMarks) {
 		this.studentId = studentId;
