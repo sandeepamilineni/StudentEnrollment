@@ -5,9 +5,9 @@ import java.util.List;
 import com.student.model.Student;
 
 public interface StudentService {
-	public void enrollStudent(Student student);
-	public Student searchStudentById(String Id);
+	public int enrollStudent(Student student);
+	public Student searchStudentById(int sid);
 	public List<Student> fetchAllStudents() ;
-	public List<Student> getStudentbyHighestMarks();
+	public Student getStudentbyHighestMarks();
 
 }

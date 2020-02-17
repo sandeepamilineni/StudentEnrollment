@@ -3,10 +3,18 @@ package com.student.dao;
 import java.util.List;
 
 import com.student.model.Student;
-
+/**
+ * 
+ * @author Prakash/Sandeep
+ *
+ * 
+ */
 public interface StudentDAO {
-	public void enrollStudent(Student student);
-	public Student searchStudentById(String Id);
-	public List<Student> fetchAllStudents() ;
-	public List<Student> getStudentbyHighestMarks();
+	public int enrollStudent(Student student);
+
+	public Student searchStudentById(int Id);
+
+	public List<Student> fetchAllStudents();
+
+	public Student getStudentbyHighestMarks();
 }

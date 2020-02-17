@@ -7,23 +7,31 @@ import org.springframework.stereotype.Service;
 
 import com.student.dao.StudentDAO;
 import com.student.model.Student;
+
 @Service
 public class StudentServiceImpl implements StudentService {
-	
+
 	@Autowired
 	StudentDAO studentDAO;
-	
-	public void enrollStudent(Student student) {
-		studentDAO.enrollStudent(student);
+
+	public int enrollStudent(Student student) {
+		int result = studentDAO.enrollStudent(student);
+		return result;
 	}
-	public Student searchStudentById(String Id) {
-		return studentDAO.searchStudentById(Id);
+
+	public Student searchStudentById(int sid) {
+		Student student = studentDAO.searchStudentById(sid);
+		return student;
 	}
+
 	public List<Student> fetchAllStudents() {
-		return studentDAO.fetchAllStudents();
+		List<Student> studentList = studentDAO.fetchAllStudents();
+		return (List<Student>) studentList;
 	}
-	public List<Student> getStudentbyHighestMarks() {
-		return studentDAO.getStudentbyHighestMarks();
+
+	public Student getStudentbyHighestMarks() {
+		Student student = (Student) studentDAO.getStudentbyHighestMarks();
+		return student;
 	}
 
 }
