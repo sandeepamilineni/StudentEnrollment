@@ -9,4 +9,8 @@ Create a java application with four options.
  - Get the student who has the highest total marks. Store that student object in a file using serialization.
 
 ### Environment
-Java , Spring , Mysql
+ - Technologies used Java, Spring, Mysql
+
+## Execution 
+
+- 
