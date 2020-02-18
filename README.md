@@ -8,9 +8,7 @@ Create a java application with four options.
  - Get all student details and store in a List. Implement a Comparable interface and sort the list using total marks and display.
  - Get the student who has the highest total marks. Store that student object in a file using serialization.
 
-### Environment
+## Environment
  - Technologies used Java, Spring, Mysql
 
-## Execution 
 
-- 
