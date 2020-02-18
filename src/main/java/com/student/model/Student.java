@@ -10,8 +10,9 @@ public class Student implements Serializable, Comparable<Student> {
 	private String studentId;
 	private String studentName;
 	private int studentMarks;
-	
-	public Student() { }
+
+	public Student() {
+	}
 
 	public Student(String studentId, String studentName, int studentMarks) {
 		this.studentId = studentId;

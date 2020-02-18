@@ -6,10 +6,11 @@ import com.student.model.Student;
 /**
  * 
  * @author Prakash/Sandeep
- *
+ * 
  * 
  */
 public interface StudentDAO {
+	
 	public int enrollStudent(Student student);
 
 	public Student searchStudentById(int Id);
