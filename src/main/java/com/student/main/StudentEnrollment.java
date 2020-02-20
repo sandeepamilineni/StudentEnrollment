@@ -31,11 +31,11 @@ public class StudentEnrollment {
 	 */
 	public void displayMenu() {
 		while (true) {
-			System.out.println("*****************************************************");
+			System.out.println("\n*****************************************************\n");
 			System.out.println(
 					"1. Insert Student Record  \n2. Search Student record by ID  \n3. Fetch all Student records \n4. Get Student  record with highest score \n5. Exit from menu");
 			Scanner scanner = new Scanner(System.in);
-			System.out.println("*****************************************************");
+			System.out.println("\n*****************************************************\n");
 			System.out.println("Choose an option from the above list:\n");
 			String selectedChoice = scanner.next();
 			int selectedChoiceInt = Integer.parseInt(selectedChoice.trim());
@@ -54,11 +54,11 @@ public class StudentEnrollment {
 					getStudentbyHighestMarks();
 					break;
 				}
-			} else if (selectedChoice.equals("5")) {
-				System.out.println("Exit from Menu");
+			} else if (selectedChoice == "5" && selectedChoice =="0") {
+				System.out.println("Exit from Main Menu");
 				break;
 			} else {
-				System.out.println("**Please choose an option between 1 to 5 **");
+				System.out.println("\n**Please choose an option between 1 to 5 **");
 			}
 		}
 	}

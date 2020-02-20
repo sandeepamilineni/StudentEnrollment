@@ -13,6 +13,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.runners.MockitoJUnitRunner;
 import com.student.model.Student;
 import com.student.service.StudentService;
@@ -37,10 +38,16 @@ public class StudentEnrollmentTest {
 		student.setStudentId("65");
 		student.setStudentName("Prakash");
 		student.setStudentMarks(590);
+		Student student2 = new Student();
+		student2.setStudentId("66");
+		student2.setStudentName("Sandeep");
+		student2.setStudentMarks(592);
+		
 		studentList.add(student);
+		studentList.add(student2);
 		when(studentServiceMock.fetchAllStudents()).thenReturn(studentList);
 		studentEnrollment.fetchAllStudents();
-		assertEquals(1, studentList.size());
+		assertEquals(2, studentList.size());
 	}
 
 	@Test
@@ -60,7 +67,7 @@ public class StudentEnrollmentTest {
 		student.setStudentId("65");
 		student.setStudentName("Sandeep");
 		student.setStudentMarks(590);
-		when(studentServiceMock.searchStudentById(65)).thenReturn(student);
+		Mockito.when(studentServiceMock.searchStudentById(65)).thenReturn(student);
 		studentEnrollment.searchStudentById();
 		assertEquals("Sandeep", student.getStudentName());
 		assertEquals("65", student.getStudentId());
